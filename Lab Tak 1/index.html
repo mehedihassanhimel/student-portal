@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Denotes Required Info</p>
+<h3>Donor Information</h3>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+
+  <label for="cname">Company:</label>
+  <input type="text" id="cname" name="cname" value=""><br>
+
+  <label for="aname1">Address 1:</label>
+  <input type="text" id="aname1" name="aname1" value=""><br>
+
+  <label for="aname2">Address 2:</label>
+  <input type="text" id="aname2" name="aname2" value=""><br>
+
+  <label for="cityname">City:</label>
+  <input type="text" id="cityname" name="cityname" value=""><br>
+
+ 
+  <label for="states">State:</label>
+  <select name="states" id="states">
+    <option value="california">California</option>
+    <option value="florida">Florida</option>
+    <option value="arizona">Arizona</option>
+    <option value="michigan">Michigan</option>
+  </select>
+<br>
+  <label for="zcode">Zipcode:</label>
+  <input type="zcode" id="zcode" name="zcode" value=""><br>
+
+  <label for="countries">Coutry:</label>
+  <select name="countries" id="countries">
+    <option value="usa">USA</option>
+    <option value="canada">Canada</option>
+    <option value="australia">Australia</option>
+  </select>
+<br>
+
+<label for="phone">Phone:</label>
+<input type="text" id="phone" name="phone" value=""><br>
+<label for="fax">Fax:</label>
+<input type="text" id="fax" name="fax" value=""><br>
+<label for="cityname">Email:</label>
+<input type="text" id="email" name="email" value=""><br>
+
+<input type="radio" id="none" name="amount" value="none">
+  <label for="none">None</label><br>
+  <input type="radio" id="zero" name="amount" value="zero">
+  <label for="zero">$0</label><br>
+  <input type="radio" id="fifty" name="amount" value="fifty">
+  <label for="fifty">$50</label><br>
+  <input type="radio" id="hundred" name="amount" value="hundred">
+  <label for="hundred">$100</label><br>
+
+  <input type="radio" id="other" name="amount" value="other">
+  <label for="other">Other</label>
+<br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
