@@ -1,0 +1,24 @@
+
+[
+	{
+		"course": "Algorithm",
+		"time": "Sunday 8am-10am and Tuesday 8-11am "
+		
+	},
+	{
+		"course": "Data Structure",
+		"time": "Monday 8-10am and Wednesday 8-11am"
+	},
+    {
+        "course": "Math",
+		"time": "Sunday 11am-12:30pm and Tuesday"
+    },
+    {
+        "course": "Database",
+		"time": "Monday 12pm-2pm and Wednesday 11am-2pm"
+    },
+    {
+        "course": "Theory Of Computation",
+		"time": "Monday 2pm-3:30pm and Wednesday 2pm-3:30pm"
+    }
+]

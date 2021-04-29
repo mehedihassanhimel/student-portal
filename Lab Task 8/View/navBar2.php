@@ -9,11 +9,10 @@
 
 <div class="navbar">
   <a href="../Controller/home1.php">Home</a>
-  <a href="../Ajax/ajax.php">Courses By Semester</a>
+  <a href="../View/getCourseAJAX.php">Courses By Semester</a>
   <!-- <a href="#">Academic</a> -->
-  <a href="../Ajax/offeredCoursesAJAX.php">Offered Courses</a>
-  <a href="#">Forms</a>
-  <a href="#">Financials</a>
+  <a href="../View/offeredCoursesAJAX.php">Offered Courses</a>
+  <a href="../View/downloadForms.php">Forms</a>
 
   <div class="dropdown">
     <button class="dropbtn">Settings

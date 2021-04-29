@@ -1,8 +1,7 @@
 <?php 
-  include('../View/navbar2.php');
+include('session.php');
+include('../View/navbar2.php');
 
-
-session_start(); 
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -37,20 +36,7 @@ $conn->close();
 
 echo "<h3>Welocome, " . strtoupper($_SESSION['name']) . "<h3>";
 echo "<br>";
-include('../View/courseTable.html');
+include('../View/courseTable.php');
 
-// To check if session is started. 
-if(isset($_SESSION["userid"])) 
-{ 
-if(time()-$_SESSION["login_time_stamp"] >600) 
-{ 
-	session_unset(); 
-	session_destroy(); 
-	header("Location:../View/loginV.php"); 
-} 
-} 
-else
-{ 
-header("Location:../View/loginV.php"); 
-} 
+
 ?> 

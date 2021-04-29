@@ -1,5 +1,0 @@
-<?php
-
-$hello = "hello world";
-
-?>

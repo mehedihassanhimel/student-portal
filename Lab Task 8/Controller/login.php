@@ -16,30 +16,24 @@ if(isset($_POST['submit'])){
         $count = $row['cntUser'];
 
         if($count > 0){
-            session_start();
-            $_SESSION["userid"] = $userid;
-            $_SESSION["password"] = $password;
-            
-           
+        if(isset($_POST["remember"])) {
+	        setcookie ("userid",$_POST["userid"],time()+ (86400), "/");
+	        setcookie ("password",$_POST["psw"],time()+ (86400), "/");
+	         
+        } else {
+	        setcookie("username","");
+	        setcookie("password","");
+	        
+        }
 
-
-        // if(!empty($_POST["remember"])) {
-	    //     setcookie ("username",$_POST["username"],time()+ 20);
-	    //     setcookie ("password",$_POST["password"],time()+ 20);
-	    //      echo "Cookies Set Successfuly";
-        // } else {
-	    //     setcookie("username","");
-	    //     setcookie("password","");
-	    //     echo "Cookies Not Set";
-        // }
-
-
-
-          // Login time is stored in a session variable 
-              $_SESSION["login_time_stamp"] = time(); 
-              header('Location: home1.php');
-            // header('Location: loginSession.php');
-            exit();
+        session_start();
+        $_SESSION["userid"] = $userid;
+        $_SESSION["password"] = $password;
+        // Login time is stored in a session variable 
+        $_SESSION["login_time_stamp"] = time(); 
+        header('Location: home1.php');
+        // header('Location: loginSession.php');
+        exit();
 
         }
         else{

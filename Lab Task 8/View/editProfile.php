@@ -1,23 +1,7 @@
-<?php 
-include('../View/navbar2.php');
-session_start(); 
-// To check if session is started. 
-if(isset($_SESSION["userid"])) 
-{ 
-if(time()-$_SESSION["login_time_stamp"] >600) 
-{ 
-	session_unset(); 
-	session_destroy(); 
-	header("Location:../View/loginV.php"); 
-} 
-} 
-else
-{ 
-header("Location:../View/login.php"); 
-} 
-?>
+
 
 <?php
+include('../Controller/session.php');
   include '../Model/editInfoDB.php';
 ?>
 
@@ -69,7 +53,7 @@ fieldset{ width: 400px; }
       
       <br>
       <input type="submit" name="submit" value="Apply Changes">
-     <input type="button" class="cancelbtn" value="Cancel">
+      <a href="../Controller/home1.php"><input type="button" class="cancelbtn" value="Cancel"></a>
       </fieldset>  
     </form>
     <div class="form">

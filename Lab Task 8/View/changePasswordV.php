@@ -1,22 +1,6 @@
-<?php   
-session_start();
-  
-// To check if session is started.
-if(isset($_SESSION["userid"])) 
-{
-    if(time()-$_SESSION["login_time_stamp"] >600)  
-    {
-        session_unset();
-        session_destroy();
-        header("Location:../View/loginV.php");
-    }
-}
-else
-{
-    header("Location:../View/loginV.php");
-}
-?> 
+
 <?php
+include('../Controller/session.php');
 include 'navBar2.php';
 $passwordErr = $passwordErrNew = $passwordErrNew2 = "";
 ?>
@@ -44,7 +28,7 @@ $passwordErr = $passwordErrNew = $passwordErrNew2 = "";
     <p id="pswNew2Error"></p>
     <br><br>
     <input type="submit" value=Submit>
-    <input type="button" class="cancelbtn" value=Cancel>
+    <a href="../Controller/home1.php"> <input type="button" class="cancelbtn" value=Cancel></a>
     <br>
 
 </form>
